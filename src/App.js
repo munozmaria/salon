@@ -7,7 +7,7 @@ import color from './images/color.jpg';
 import imageModel from "./images/model2.jpg"
 import './styles/button.css';
 import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
+
 
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
 				>
 					<img
 						src={imageModel}
-						alt="A picture"
+						alt="model"
 						style={{
 							height: "400px",
 							marginLeft: "50px",
@@ -110,7 +110,7 @@ function App() {
 					>
 						Nos services
           </h1>
-          <Carousel></Carousel>
+          
 				</div>
 			</Parallax>
 		</div>
