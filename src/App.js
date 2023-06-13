@@ -11,11 +11,13 @@ import Navbar from './components/Navbar';
 
 
 
+
 function App() {
   return (
 		<div className="App">
 
-			<Navbar></Navbar>
+		  <Navbar></Navbar>
+		  
 
 			<Parallax bgImage={bg} strength={500} speed={-10}>
 				<div
