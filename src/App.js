@@ -10,10 +10,13 @@ import Navbar from './components/Navbar';
 
 
 
+
 function App() {
   return (
 		<div className="App">
+
 			<Navbar></Navbar>
+
 			<Parallax bgImage={bg} strength={500} speed={-10}>
 				<div
 					style={{
@@ -94,6 +97,7 @@ function App() {
 			</Parallax>
 			<Parallax bgImage={bg2} strength={500} speed={-10}>
 				<div
+					id="services"
 					style={{
 						height: "100vh",
 						display: "flex",
@@ -109,8 +113,7 @@ function App() {
 						}}
 					>
 						Nos services
-          </h1>
-          
+					</h1>
 				</div>
 			</Parallax>
 		</div>

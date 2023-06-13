@@ -1,61 +1,88 @@
 import React, { useEffect, useState } from "react"
-import logo from "../images/logo.png"
+
 import "../styles/Navbar.css"
 
 const Navbar = () => {
 
-    const [navbarColor, setNavbarColor] = useState("transparent")
-     const [navbarHeigth, setNavbarHeigth] = useState("50px")
-    const [showLogo, setShowLogo] = useState(false)
-     const [isScrolled, setIsScrolled] = useState(false)
+	
+const [menuOpen, setmenuOpen] = useState(false);
 
-		const listenScrollEvent = (event) => {
-			if (window.scrollY > 50) {
-                setNavbarColor("white")
-                setNavbarHeigth('67px')
-                setIsScrolled(true)
-                setShowLogo(true)
-			} else {
-                setNavbarColor("transparent")
-                setNavbarHeigth("50px")
-                setShowLogo(false)
-                setIsScrolled(false)
-			}
-		}
-
-		useEffect(() => {
-            window.addEventListener("scroll", listenScrollEvent)
-            
-			return () => window.removeEventListener("scroll", listenScrollEvent)
-		}, [])
+   
 
 		return (
 			<header>
-				<nav
-					style={{ backgroundColor: navbarColor, height: navbarHeigth }}
-					className="navbar"
+				<div
+					className={menuOpen ? "open" : "close"}
+					onClick={() => setmenuOpen(!menuOpen)}
 				>
-					<div className={`logo ${showLogo ? "visible" : ""}`}>
-						<img src={logo} alt="Logo" />
+					<div class="login">Login</div>
+					<div class="burger" title="Open/Close menu">
+						<div class="line l1"></div>
+						<div class="line l2"></div>
+						<div class="line l3"></div>
 					</div>
-					<ul>
-						<li>
-							<a style={{ color: isScrolled ? "black" : "white" }} href="/">
-								Services
-							</a>
-						</li>
-						<li>
-							<a style={{ color: isScrolled ? "black" : "white" }} href="/">
-								Equipe
-							</a>
-						</li>
-						<li>
-							<a style={{ color: isScrolled ? "black" : "white" }} href="/">
-								Reservation
-							</a>
-						</li>
-					</ul>
-				</nav>
+					<div id="menu">
+						<div className="wrapper">
+							<span class="label-menu">MENU</span>
+							<ul>
+								<li>
+									<a class="chakra-link active css-1udx80" href="/">
+										<span>
+											<div class="text-link">Accueil</div>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a class="chakra-link css-1udx80" href="/services">
+										<span>
+											<div class="text-link">Nos services</div>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a class="chakra-link css-1udx80" href="/a-propos">
+										<span>
+											<div class="text-link">A propos</div>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="menu-contact">
+							<div class="menu-email">
+								<div class="menu-email-label">Contactez nous</div>
+								<a class="chakra-link css-iinnqw" role="group">
+									<p class="chakra-text css-ondl7t">contact@saracoiffeur.fr</p>
+								</a>
+							</div>
+							<div class="menu-sub-infos">
+								<ul class="menu-social">
+									<li>
+										<a
+											href="https://github.com/"
+											target="_blank"
+											class="ico-github"
+										></a>
+									</li>
+									<li>
+										<a
+											href="https://www.linkedin.com/"
+											target="_blank"
+											class="ico-linkedin"
+										></a>
+									</li>
+									<li>
+										<a
+											href="https://www.instagram.com/"
+											target="_blank"
+											class="ico-instagram"
+										></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</header>
 		)
 
