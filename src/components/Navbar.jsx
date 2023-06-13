@@ -17,6 +17,7 @@ const Navbar = () => {
 			console.log(e.target)
 			if (menuRef.current && !menuRef.current.contains(e.target)) {
 				setmenuOpen(false)
+				
 				console.log(menuRef.current)
 			}
 		}
