@@ -13,8 +13,12 @@
    }
 
    .sonInfo {
-    text-align: center;
+    text-align: center!important;
     margin-right:0px!important;
+   }
+
+   .react-parallax-bgimage{
+    left: 0px!important;
    }
 }
 
