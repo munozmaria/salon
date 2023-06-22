@@ -56,7 +56,7 @@ const Login = () => {
 						<h1>Already have an account</h1>
 						<p className="journey">Please Login</p>
 						<button onClick={signIn} id="signIn" class="overBtn">
-							SignIn
+							Sign In
 						</button>
 					</div>
 					<div class="overlay-pannel overlay-right">
