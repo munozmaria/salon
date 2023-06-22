@@ -7,6 +7,7 @@ import color from './images/color.jpg';
 import imageModel from "./images/model2.jpg"
 import './styles/button.css';
 import Navbar from './components/Navbar';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 
 
@@ -17,6 +18,7 @@ function App() {
 		<div className="App">
 
 		  <Navbar></Navbar>
+		  
 		  
 
 			<Parallax bgImage={bg} strength={500} speed={-10}>

@@ -22,10 +22,7 @@ p {
 }
 /* paragraphs */
 /* span tags */
-span {
-  font-size: 14px;
-  color: #a9a9a9;
-}
+
 span .forgot {
   color: #c850c0;
   cursor: pointer;
