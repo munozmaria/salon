@@ -1,18 +1,20 @@
 .scroll-to-top-button {
-     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #eabec3;
-    color: #fff;
-    border: none;
-    font-weight: bolder;
-    padding: 10px 15px;
-    border-radius: 52px;
-    cursor: pointer;
-    transition: opacity 0.3s;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: transparent;
+	color: #fff;
+	border: none;
+	font-weight: bolder;
+	padding: 10px 15px;
+	border-radius: 52px;
+	cursor: pointer;
+	transition: opacity 0.3s;
+	backdrop-filter: blur(39px);
+	font-size: 17px;
+	text-shadow: rgb(0, 0, 0) 2px 2px 4px;
 }
 
-
-.hide{
-    display: none;
+.hide {
+	display: none;
 }
