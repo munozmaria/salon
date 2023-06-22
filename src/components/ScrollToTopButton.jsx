@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "../styles/scrollButton.css"
-import { Background } from "react-parallax"
+
 
 function ScrollToTopButton() {
 	const [isVisible, setIsVisible] = useState(false)
