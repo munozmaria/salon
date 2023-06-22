@@ -28,7 +28,8 @@ function App() {
 						alignItems: "center",
 					}}
 				>
-					<h1
+				  <h1
+					  className='titleAccueil'
 						style={{
 							color: "white",
 							fontSize: "64px",
@@ -40,7 +41,8 @@ function App() {
 				</div>
 			</Parallax>
 			<Parallax bgImage={color} strength={500} height={1000}>
-				<div
+			  <div
+				  className='parentInfo'
 					style={{
 						height: "600px",
 						display: "flex",
@@ -60,7 +62,8 @@ function App() {
 							borderRadius: "5px",
 						}}
 					/>
-					<div
+				  <div
+					  className='sonInfo'
 						style={{
 							display: "flex",
 							justifyContent: "center",
@@ -70,7 +73,8 @@ function App() {
 							textAlign: "start",
 						}}
 					>
-						<h3
+					  <h3
+						  className='titleInfo'
 							style={{
 								color: "white",
 								fontSize: "40px",
@@ -107,7 +111,8 @@ function App() {
 						alignItems: "center",
 					}}
 				>
-					<h1
+				  <h1
+					  className='titleAccueil'
 						style={{
 							color: "white",
 							fontSize: "64px",

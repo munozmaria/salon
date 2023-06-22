@@ -1,0 +1,19 @@
+
+@media only screen and (max-width: 840px){
+    
+    .titleAccueil{
+        text-align: center;
+        margin: 15px;
+    }
+
+   .parentInfo{
+    flex-direction: column;
+    margin: 50px;
+    height: 1000px!important;
+   }
+
+   .sonInfo {
+    text-align: center;
+    margin-right:0px!important;
+   }
+}

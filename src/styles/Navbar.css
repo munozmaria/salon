@@ -411,6 +411,10 @@
         border-radius: 0.375rem;
 }
 
+.hidden{
+    display: none;
+}
+
 .burger{
     cursor: pointer;
     z-index: 1300;

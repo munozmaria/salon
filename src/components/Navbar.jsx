@@ -10,6 +10,24 @@ const Navbar = () => {
 	const [loginOpen, setloginOpen] = useState(false);
 
 	
+  const [isVisible, setIsVisible] = useState(true)
+	let prevScrollPos = window.scrollY
+
+	const handleScroll = () => {
+		const currentScrollPos = window.scrollY
+
+		if (prevScrollPos > currentScrollPos) {
+			setIsVisible(window.scrollY === 0)
+		} else {
+			setIsVisible(false)
+		}
+
+		prevScrollPos = currentScrollPos
+	}
+
+
+
+	
 	let menuRef = useRef(null)
 
 	useEffect(() => {
@@ -22,9 +40,11 @@ const Navbar = () => {
 			}
 		}
 		document.addEventListener("mousedown", handler)
+		document.addEventListener("scroll", handleScroll)
 
 		return () => {
 			document.removeEventListener("mousedown", handler)
+			document.removeEventListener("scroll", handleScroll)
 		}
 	})
 
@@ -33,17 +53,19 @@ const Navbar = () => {
 		return (
 			<header>
 				<div
-					className="login"
+					className={isVisible ? "login" : "login hidden"}
+					style={{ transition: "transform 0.1s" }}
 					onClick={() => {
 						setloginOpen(false)
 						setmenuOpen(!menuOpen)
 					}}
 				>
+					{" "}
 					Login
 				</div>
 				<div className={menuOpen ? "open" : "close"}>
 					<div
-						class="burger"
+						className={isVisible ? "burger" : "burger hidden"}
 						title="Open/Close menu"
 						onClick={() => {
 							setloginOpen(true)
@@ -101,6 +123,7 @@ const Navbar = () => {
 														href="https://github.com/"
 														target="_blank"
 														class="ico-github"
+														rel="noreferrer"
 													></a>
 												</li>
 												<li>
@@ -108,6 +131,7 @@ const Navbar = () => {
 														href="https://www.linkedin.com/"
 														target="_blank"
 														class="ico-linkedin"
+														rel="noreferrer"
 													></a>
 												</li>
 												<li>
@@ -115,6 +139,7 @@ const Navbar = () => {
 														href="https://www.instagram.com/"
 														target="_blank"
 														class="ico-instagram"
+														rel="noreferrer"
 													></a>
 												</li>
 											</ul>
