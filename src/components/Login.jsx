@@ -1,29 +1,17 @@
-import React, {useRef} from 'react'
+import React, { useRef } from "react"
 import "../styles/login.css"
 
 const Login = () => {
-
 	const targetRef = useRef(null)
 	const signUp = () => {
-		const signUpBUtton = document.getElementById("signUp")
-		
-	
-		signUpBUtton.addEventListener("click", () => {
-			targetRef.current.classList.add("right-panel-active")
-		})
-
-	
+		targetRef.current.classList.add("right-panel-active")
 	}
 
 	const signIn = () => {
-		const signInBUtton = document.getElementById("signIn")
-			signInBUtton.addEventListener("click", () => [
-				targetRef.current.classList.remove("right-panel-active"),
-			])
-	 }
+		targetRef.current.classList.remove("right-panel-active")
+	}
 
-
-  return (
+	return (
 		<div ref={targetRef} class="container" id="container">
 			<div className="container2">
 				<div class="form sign_up">

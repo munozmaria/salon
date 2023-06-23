@@ -269,20 +269,6 @@ input {
 	background: linear-gradient(90deg, #4158d0, #f441a5, #ffcc70, #4158d0);
 }
 
-/* .overBtn 
-
-
-
-
-
-
-
-
-
-
-
-
-*/
 
 .journey {
 	padding-top: 40px;
@@ -291,7 +277,7 @@ input {
 @media only screen and (max-width: 980px) {
 	.container {
 		top: 16vh;
-		right: 13vw;
+		right: 7vw;
 	}
 }
 

@@ -60,11 +60,7 @@ const Navbar = () => {
 				<div
 					className={isVisible ? "login shop" : "login hidden"}
 					style={{right : "17vw"}}
-					onClick={() => {
-						setloginOpen(false)
-						setmenuOpen(!menuOpen)
-					}}
-				>
+					>
 					{" "}
 					Shop
 				</div>
