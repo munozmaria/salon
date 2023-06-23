@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import "../styles/login.css"
-import {fetchea} from "../user/signup"
+import { fetchea } from "../user/signup"
+import { fetchLogin } from "../user/login"
 
 const Login = () => {
 	const targetRef = useRef(null)
@@ -26,6 +27,21 @@ const handula = async (e) => {
 		})
 	}
 
+
+	const loginFetch = async (e) => {
+
+		e.preventDefault();
+		const username = document.getElementById("email2")
+		const password = document.getElementById("password2")
+		
+		await fetchLogin({
+			username: username.value,
+			password: password.value,
+		})
+	}
+	 
+
+
 	return (
 		<div ref={targetRef} class="container" id="container">
 			<div className="container2">
@@ -41,11 +57,11 @@ const handula = async (e) => {
 				</div>
 
 				<div class="form sign_in">
-					<form >
+					<form onSubmit={loginFetch}>
 						<h1>Login In</h1>
 
-						<input type="email" placeholder="Email" />
-						<input type="password" placeholder="Password" />
+						<input type="email" placeholder="Email" id="email2" />
+						<input type="password" placeholder="Password" id="password2" />
 						<span style={{ marginTop: "16px" }}>
 							Forgot your <span class="forgot">password?</span>
 						</span>

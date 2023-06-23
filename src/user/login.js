@@ -1,13 +1,13 @@
-async function fetchea(tokenTTL) {
-	const username = document.getElementById("username")
-	const password = document.getElementById("password")
+async function fetchLogin({username, password}) {
+	
 
-	return fetch("/auth/login", {
+
+	return fetch("/login", {
 		method: "post",
 		body: new URLSearchParams({
-			username: username.value,
-			password: password.value,
-			tokenTime: tokenTTL,
+			username,
+			password,
+			
 		}),
 	})
 		.then((response) => response.json())
@@ -17,3 +17,6 @@ async function fetchea(tokenTTL) {
 			return Promise.resolve("Login Correcto, redirigiendo...")
 		})
 }
+
+
+module.exports = {fetchLogin}

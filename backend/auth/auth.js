@@ -14,7 +14,7 @@ passport.use(
 			console.log('holasteozr', username, password)
 			try {
 				const user = await UserModel.create({ username, password })
-				console.log(user, 'este es el user')
+				
 				return done(null, user)
 			} catch (error) {
 				done(error)
@@ -33,7 +33,7 @@ passport.use(
 		async (username, password, done) => {
 			try {
 				const user = await UserModel.findOne({ username })
-
+			
 				if (!user) {
 					return done(null, false, { message: "User not found" })
 				}

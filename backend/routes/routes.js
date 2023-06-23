@@ -24,7 +24,7 @@ router.post("/login", async (req, res, next) => {
 				console.log("errNo login", err)
 				return res.json({ error: "Error en el servidor" })
 			} else if (!user) {
-				console.log("Mal user")
+				console.log("Mal user", user, info)
 
 				return res.json({ error: "Usuario o Contraseña incorrectos" })
 			}

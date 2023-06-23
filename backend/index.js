@@ -19,7 +19,9 @@ const secureRoute = require("./routes/secure-routes")
 
 const app = express()
 
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+
 
 app.use("/", routes)
 
