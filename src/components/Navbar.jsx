@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from "react"
 
+
+
 import "../styles/Navbar.css"
 import Login from "./Login";
 
@@ -56,7 +58,7 @@ const Navbar = () => {
 		return (
 			<header>
 				<div
-					className={isVisible ? "login" : "login hidden"}
+					className={isVisible ? "login shop" : "login hidden"}
 					style={{right : "17vw"}}
 					onClick={() => {
 						setloginOpen(false)
