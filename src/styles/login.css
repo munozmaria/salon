@@ -255,7 +255,7 @@ input {
 	right: -5px;
 	bottom: -5px;
 	z-index: -1;
-	background: linear-gradient(90deg, #eabec3, #f441a5, #ffcc70, #4158d0);
+	    background: linear-gradient(90deg, #eabec3, #a08f9e, #ffcc70, #4158d0);
 	background-size: 400%;
 	border-radius: 35px;
 	transition: 1s;
