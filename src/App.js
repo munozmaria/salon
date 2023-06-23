@@ -99,7 +99,7 @@ function App() {
 							la façon dont vous racontez votre histoire en ligne peut faire
 							toute la différence.
 						</p>
-						<button class="button-primary">Découvrez l'équipe</button>
+						<button class="overBtn">Découvrez l'équipe</button>
 					</div>
 				</div>
 			</Parallax>
