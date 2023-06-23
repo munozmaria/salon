@@ -11,8 +11,10 @@ passport.use(
 			passwordField: "password",
 		},
 		async (username, password, done) => {
+			console.log('holasteozr', username, password)
 			try {
 				const user = await UserModel.create({ username, password })
+				console.log(user, 'este es el user')
 				return done(null, user)
 			} catch (error) {
 				done(error)

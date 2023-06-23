@@ -1,5 +1,6 @@
 import React, { useRef } from "react"
 import "../styles/login.css"
+import {fetchea} from "../user/signup"
 
 const Login = () => {
 	const targetRef = useRef(null)
@@ -11,22 +12,36 @@ const Login = () => {
 		targetRef.current.classList.remove("right-panel-active")
 	}
 
+
+   	
+const handula = async (e) => {
+		e.preventDefault();
+		const username = document.getElementById("email")
+		const password = document.getElementById("password")
+		
+		await fetchea({
+			username: username.value,
+			
+			password: password.value,
+		})
+	}
+
 	return (
 		<div ref={targetRef} class="container" id="container">
 			<div className="container2">
 				<div class="form sign_up">
-					<form action="#">
+					<form onSubmit={handula}>
 						<h1>Create An Account</h1>
 
-						<input type="text" placeholder="User Name" />
-						<input type="email" placeholder="Email" />
-						<input type="password" placeholder="Password" />
+						
+						<input type="email" placeholder="Email" id="email" />
+						<input type="password" placeholder="Password" id="password" />
 						<button className="overBtn">Create Account</button>
 					</form>
 				</div>
 
 				<div class="form sign_in">
-					<form action="#">
+					<form >
 						<h1>Login In</h1>
 
 						<input type="email" placeholder="Email" />
