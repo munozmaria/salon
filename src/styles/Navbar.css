@@ -388,10 +388,12 @@
    cursor: pointer;
     z-index: 1300;
      position:fixed;
-    top: 31px;
-    right: 14vw;
+    top: 25px;
+    right: 11vw;
         font-size: 18px;
     color: #fff;
+      padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     transition: all .3s ease-in-out;
     text-shadow: rgb(0, 0, 0) 2px 2px 4px;
     letter-spacing: 1px;
@@ -403,14 +405,13 @@
 .login:hover{
    --tw-bg-opacity: 1;
     background-color: #A08F9E;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+   
         padding-left: 0.5rem;
     padding-right: 0.5rem;
         border-radius: 0.375rem;
 }
 
-@media only screen and (max-width: 690px){
+@media only screen and (max-width: 840px){
     .login{
       right: 22vw;
     }

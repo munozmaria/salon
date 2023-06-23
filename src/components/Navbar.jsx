@@ -31,6 +31,9 @@ const Navbar = () => {
 	let menuRef = useRef(null)
 
 	useEffect(() => {
+
+
+
 		let handler = (e) => {
 			console.log(e.target)
 			if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -54,7 +57,7 @@ const Navbar = () => {
 			<header>
 				<div
 					className={isVisible ? "login" : "login hidden"}
-					style={{ transition: "transform 0.1s" }}
+					
 					onClick={() => {
 						setloginOpen(false)
 						setmenuOpen(!menuOpen)
