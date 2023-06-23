@@ -57,7 +57,17 @@ const Navbar = () => {
 			<header>
 				<div
 					className={isVisible ? "login" : "login hidden"}
-					
+					style={{right : "17vw"}}
+					onClick={() => {
+						setloginOpen(false)
+						setmenuOpen(!menuOpen)
+					}}
+				>
+					{" "}
+					Shop
+				</div>
+				<div
+					className={isVisible ? "login" : "login hidden"}
 					onClick={() => {
 						setloginOpen(false)
 						setmenuOpen(!menuOpen)

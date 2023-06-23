@@ -7,7 +7,7 @@ import color from './images/color.jpg';
 import imageModel from "./images/model2.jpg"
 import './styles/button.css';
 import Navbar from './components/Navbar';
-import ScrollToTopButton from './components/ScrollToTopButton';
+
 
 
 
@@ -38,7 +38,7 @@ function App() {
 							textShadow: "2px 2px 4px #000000",
 						}}
 					>
-						Bienvenue au Salon de Sarah
+						GLAM TO GO
 					</h1>
 				</div>
 			</Parallax>
