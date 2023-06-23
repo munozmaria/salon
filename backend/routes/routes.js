@@ -16,23 +16,23 @@ router.post(
 )
 
 router.post("/login", async (req, res, next) => {
-	console.log("autenticaaaaaaaaaaaaaaaaaa")
+	
 	passport.authenticate("login", async (err, user, info) => {
-		//console.log('cabesera', req.headers);
+		
 		try {
 			if (err) {
-				console.log("errNo login", err)
+				
 				return res.json({ error: "Error en el servidor" })
 			} else if (!user) {
-				console.log("Mal user", user, info)
+				
 
 				return res.json({ error: "Usuario o Contraseña incorrectos" })
 			}
 
 			req.login(user, { session: false }, async (error) => {
-				console.log("se errosio2", error)
+				
 				if (error) return next(error)
-				console.log("cotinua esta")
+				
 
 				const body = { _id: user._id, username: user.username }
 				const token = jwt.sign(
