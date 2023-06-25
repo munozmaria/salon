@@ -92,10 +92,7 @@ function App() {
 								textShadow: "2px 2px 4px #000000",
 							}}
 						>
-							Tout commence par une idée. Peut-être voulez-vous créer une
-							entreprise. Peut-être voulez-vous donner une nouvelle dimension à
-							un passe-temps. Ou peut-être avez-vous un projet créatif que vous
-							souhaitez partager avec le monde entier. Quel que soit votre cas,
+							Quel que soit votre cas,
 							la façon dont vous racontez votre histoire en ligne peut faire
 							toute la différence.
 						</p>
