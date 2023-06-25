@@ -9,7 +9,7 @@
    .parentInfo{
     flex-direction: column;
     margin: 50px;
-    height: 1000px!important;
+    height: 100%!important;
    }
 
    .sonInfo {
