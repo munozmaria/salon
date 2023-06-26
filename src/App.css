@@ -1,3 +1,8 @@
+.paralaxBg{
+    background-color:#f9e7d9;
+   
+}
+
 
 @media only screen and (max-width: 890px){
     
@@ -18,7 +23,20 @@
    }
 
    .react-parallax-bgimage{
-    left: 0px!important;
+    width: 1050px !important;
+    height: 100% !important;
+    background-size: cover!important;
+    
    }
 }
 
+@media only screen and (max-width: 500px){
+
+   .react-parallax-bgimage{
+    width: 1000px !important;
+    height: 100% !important;
+    opacity: 0.8;
+    background-size: cover!important;
+    
+   }
+}

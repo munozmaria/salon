@@ -391,6 +391,7 @@
 
 .login {
 	cursor: pointer;
+	text-transform: uppercase;
 	z-index: 1300;
 	position: fixed;
 	top: 25px;
@@ -444,14 +445,15 @@
 }
 
 .burger .line {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: #fff;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	top: 0;
+	    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #a08f9e;
+    background-shadow: rgb(0, 0, 0) 2px 2px 4px;
+    transition: all 0.3s ease-in-out;
+    top: 0;
+    box-shadow: rgb(0, 0, 0) 2px 2px 4px;
 }
 
 .burger .line.l2 {

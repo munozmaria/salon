@@ -1,10 +1,10 @@
 
 import './App.css';
 import { Parallax } from "react-parallax"
-import bg from './images/bg.jpg';
-import bg2 from "./images/bg2.jpg"
-import color from './images/color.jpg';
-import imageModel from "./images/model2.jpg"
+import bg from './images/color.jpg';
+import bg2 from "./images/model.jpg"
+import color from './images/yepa.jpg';
+
 import './styles/button.css';
 import Navbar from './components/Navbar';
 
@@ -21,13 +21,14 @@ function App() {
 		  
 		  
 
-			<Parallax bgImage={bg} strength={500} speed={-10}>
+			<Parallax bgImage={color} strength={500} speed={-10}>
 				<div
 					style={{
 						height: "100vh",
 						display: "flex",
 						justifyContent: "center",
-						alignItems: "center",
+					  alignItems: "center",
+						width: "100vw",
 					}}
 				>
 				  <h1
@@ -38,22 +39,22 @@ function App() {
 							textShadow: "2px 2px 4px #000000",
 						}}
 					>
-						GLAM TO GO
+						BIEN ETRE COSMETICS
 					</h1>
 				</div>
 			</Parallax>
-			<Parallax bgImage={color} strength={500} height={1000}>
+			<Parallax  strength={500} height={1000} className='paralaxBg'>
 			  <div
 				  className='parentInfo'
 					style={{
-						height: "600px",
+						height: "400px",
 						display: "flex",
 						justifyContent: "center",
 						alignItems: "center",
 						marginLeft: "50px",
 					}}
 				>
-					<img
+				  {/*<img
 						src={imageModel}
 						alt="model"
 						style={{
@@ -63,7 +64,7 @@ function App() {
 							objectFit: "cover",
 							borderRadius: "5px",
 						}}
-					/>
+					/> */}
 				  <div
 					  className='sonInfo'
 						style={{
@@ -83,7 +84,7 @@ function App() {
 								textShadow: "2px 2px 4px #000000",
 							}}
 						>
-							Une nouvelle vision du cheveu
+							Decouvrez nos produits haut gamme
 						</h3>
 						<p
 							style={{
@@ -96,7 +97,7 @@ function App() {
 							la façon dont vous racontez votre histoire en ligne peut faire
 							toute la différence.
 						</p>
-						<button class="overBtn">Découvrez l'équipe</button>
+						<button class="overBtn">Shop</button>
 					</div>
 				</div>
 			</Parallax>
@@ -111,7 +112,7 @@ function App() {
 					}}
 				>
 				  <h1
-					  className='titleAccueil'
+					  className='titleServices'
 						style={{
 							color: "white",
 							fontSize: "64px",
