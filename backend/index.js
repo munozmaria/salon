@@ -2,10 +2,12 @@ const express = require("express")
 const mongoose = require("mongoose")
 const passport = require("passport")
 const bodyParser = require("body-parser")
+const cors = require("cors")
+
 
 require("dotenv").config()
 
-mongoose.connect(process.env.URI, {
+mongoose.connect(process.env.MONGODB_URI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 })
@@ -19,6 +21,7 @@ const secureRoute = require("./routes/secure-routes")
 
 const app = express()
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -34,6 +37,9 @@ app.use(function (err, req, res, next) {
 	res.json({ error: err })
 })
 
-app.listen(3001, () => {
-	console.log("Server started 👍.")
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+	console.log("Server started congratulations 👍.")
 })
