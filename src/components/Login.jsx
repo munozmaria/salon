@@ -26,7 +26,7 @@ async function fetchea({ username, password }) {
 			console.log(data, "esto es una data")
 			if ("error" in data) return Promise.reject(new Error(data.error))
 			localStorage.setItem("token", data.token)
-			return Promise.resolve("Login Correcto, redirigiendo...")
+			return Promise.resolve("Login Correcto...")
 		})
 }
 
