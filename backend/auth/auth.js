@@ -31,6 +31,7 @@ passport.use(
 			passwordField: "password",
 		},
 		async (username, password, done) => {
+			
 			try {
 				const user = await UserModel.findOne({ username })
 			
@@ -43,7 +44,7 @@ passport.use(
 				if (!validate) {
 					return done(null, false, { message: "Wrong Password" })
 				}
-
+				console.log("logincorrecto", username, password)
 				return done(null, user, { message: "Logged in Successfully" })
 			} catch (error) {
 				return done(error)
