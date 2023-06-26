@@ -9,7 +9,7 @@
 	min-height: 550px;
 	z-index: 10;
 	top: 10vh;
-    right: 26vw;
+    right: 35vw;
     height: 80vh;
 	position: absolute;
 	font-family: "Nunito", sans-serif;
@@ -273,6 +273,14 @@ input {
 .journey {
 	padding-top: 40px;
 }
+
+@media only screen and (max-width: 1450px) {
+	.container {
+		
+		right: 24vw;
+	}
+}
+
 
 @media only screen and (max-width: 980px) {
 	.container {
