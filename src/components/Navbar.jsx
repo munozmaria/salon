@@ -49,7 +49,7 @@ const Navbar = () => {
 		<header>
 			<div
 				className={isVisible ? "login shop" : "login hidden"}
-				style={{ right: "17vw" }}
+				style={{ right: "18vw" }}
 			>
 				{" "}
 				Shop
