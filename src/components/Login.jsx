@@ -28,7 +28,7 @@ const handula = async (e) => {
 	}
 
 
-	const loginFetch = async (e) => {
+const loginFetch = async (e) => {
 
 		e.preventDefault();
 		const username = document.getElementById("email2")

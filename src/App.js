@@ -1,7 +1,7 @@
 
 import './App.css';
 import { Parallax } from "react-parallax"
-import bg from './images/color.jpg';
+
 import bg2 from "./images/model.jpg"
 import color from './images/yepa.jpg';
 

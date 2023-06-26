@@ -1,7 +1,6 @@
 async function fetchLogin({username, password}) {
 	
 
-
 	return fetch("/login", {
 		method: "post",
 		body: new URLSearchParams({
