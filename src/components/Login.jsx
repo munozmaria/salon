@@ -14,7 +14,7 @@ const Login = () => {
 
 async function fetchea({ username, password }) {
 	return fetch("/signup", {
-		method: "post",
+		method: "POST",
 		body: new URLSearchParams({
 			username,
 
@@ -32,7 +32,7 @@ async function fetchea({ username, password }) {
 
 async function fetchLogin({ username, password }) {
 	return fetch("/login", {
-		method: "post",
+		method: "POST",
 		body: new URLSearchParams({
 			username,
 			password,
