@@ -1,73 +1,79 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
+import CryptoJS from "crypto-js"
 import "../styles/login.css"
 
-
 const Login = () => {
+	const [text, setText] = useState("")
+	const [screen, setScreen] = useState("encrypt")
+
+	const [encrptedData, setEncrptedData] = useState("")
+	const [decrptedData, setDecrptedData] = useState("")
+
+	const secretPass = "XkhZG4fW2t2W"
+
+	const encryptData = (password) => {
+		const data = CryptoJS.AES.encrypt(
+			JSON.stringify(password),
+			secretPass
+		).toString()
+
+		return data
+	}
+
+	const decryptData = (password) => {
+		const bytes = CryptoJS.AES.decrypt(password, secretPass)
+		const data = JSON.parse(bytes.toString(CryptoJS.enc.Utf8))
+		return data
+	}
+
 	const targetRef = useRef(null)
 	const signUp = () => {
 		targetRef.current.classList.add("right-panel-active")
 	}
 
+	//signIn
 	const signIn = () => {
 		targetRef.current.classList.remove("right-panel-active")
 	}
 
-async function fetchea({ username, password }) {
-	return fetch("/signup", {
-		method: "post",
-		body: new URLSearchParams({
-			username,
+	async function fetchea({ username, password }) {
+		localStorage.setItem(username, encryptData(password))
+	}
+	//Login
+	async function fetchLogin({ username, password }) {
+		const user = localStorage.getItem(username)
+		
+		if (user === null) {
+			console.log("no existe")
+		} else if (decryptData(user) === password) {
+			console.log("te has logado")
+		} else {
+			console.log("usuario o contrasena incorecta")
+		}
+	}
 
-			password,
-		}),
-	})
-		.then((response) => response.json())
-		.then((data) => {
-			console.log(data, "esto es una data")
-			
-		})
-}
-
-async function fetchLogin({ username, password }) {
-	return fetch("/login", {
-		method: "post",
-		body: new URLSearchParams({
-			username,
-			password,
-		}),
-	})
-		.then((response) => response.json())
-		.then((data) => {
-			console.log(data)
-		})
-}
-   	
-const handula = async (e) => {
-		e.preventDefault();
+	const handula = async (e) => {
+		e.preventDefault()
 		const username = document.getElementById("email")
 		const password = document.getElementById("password")
-		
+
 		await fetchea({
 			username: username.value,
-			
+
 			password: password.value,
 		})
 	}
 
-
-const loginFetch = async (e) => {
-
-		e.preventDefault();
+	const loginFetch = async (e) => {
+		e.preventDefault()
 		const username = document.getElementById("email2")
 		const password = document.getElementById("password2")
-		
+
 		await fetchLogin({
 			username: username.value,
 			password: password.value,
 		})
 	}
-	 
-
 
 	return (
 		<div ref={targetRef} class="container" id="container">
@@ -76,7 +82,6 @@ const loginFetch = async (e) => {
 					<form onSubmit={handula}>
 						<h1>Create An Account</h1>
 
-						
 						<input type="email" placeholder="Email" id="email" />
 						<input type="password" placeholder="Password" id="password" />
 						<button className="overBtn">Create Account</button>
