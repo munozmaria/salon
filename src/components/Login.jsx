@@ -1,15 +1,14 @@
-import React, { useRef, useState } from "react"
+import React, { useRef} from "react"
 import CryptoJS from "crypto-js"
 import "../styles/login.css"
 
+
 const Login = () => {
-	const [text, setText] = useState("")
-	const [screen, setScreen] = useState("encrypt")
+	
+	
 
-	const [encrptedData, setEncrptedData] = useState("")
-	const [decrptedData, setDecrptedData] = useState("")
-
-	const secretPass = "XkhZG4fW2t2W"
+	const secretPass = process.env.REACT_APP_CRYPT_PASS
+	console.log(secretPass)
 
 	const encryptData = (password) => {
 		const data = CryptoJS.AES.encrypt(
